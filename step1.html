@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1 - Install CPU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #0db7a3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        aside {
+            width: 25%;
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+        aside h3 {
+            margin-bottom: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 8px;
+        }
+        aside ul li a {
+            color: #494949;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
+        main {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        main p, main li {
+            line-height: 1.6;
+            color: #666;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1em;
+        }
+        .image {
+            width: 50%;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How to Build a PC: Step 1</h1>
+    <p>By: Matthew Perez</p>
+</header>
+
+<div id="container">
+    <!-- Sidebar for Dropdown Steps -->
+    <aside>
+        <h3>Select a Step:</h3>
+        <div class="dropdown">
+            <select id="steps" onchange="navigateToStep()">
+                <option value="">--Choose a Step--</option>
+                <option value="step1.html">Step 1: Install CPU</option>
+                <option value="step2.html">Step 2: Install CPU Fan</option>
+                <option value="step3.html">Step 3: Install RAM</option>
+                <option value="step4.html">Step 4: Install Motherboard into Case</option>
+                <option value="step5.html">Step 5: Install PSU</option>
+                <option value="step6.html">Step 6: Connect Cables</option>
+                <option value="step7.html">Step 7: Install GPU</option>
+                <option value="step8.html">Step 8: Install Storage</option>
+            </select>
+        </div>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Needed</a></li>
+            <li><a href="assembly.html">Assembly</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content for Step 1 -->
+    <main>
+        <h2>Step 1: Install CPU</h2>
+        
+        <h3>Materials Needed</h3>
+        <ul>
+            <li>CPU</li>
+            <li>Motherboard</li>
+        </ul>
+        
+        <h3>Instructions</h3>
+        <ol>
+            <li>Locate the CPU Socket on the Motherboard</li>
+            <p>Look for the large square socket on the motherboard, typically labeled "Socket."</p>
+            
+            <li>Identify the Gold Triangle on the CPU</li>
+            <p>Take a look at your CPU and locate the small gold triangle in one corner. This triangle aligns with a corresponding 

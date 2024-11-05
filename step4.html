@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4 - Install Motherboard into Case</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #0db7a3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        aside {
+            width: 25%;
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+        aside h3 {
+            margin-bottom: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 8px;
+        }
+        aside ul li a {
+            color: #494949;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
+        main {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        main p, main li {
+            line-height: 1.6;
+            color: #666;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1em;
+        }
+        .image {
+            width: 50%;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How to Build a PC: Step 4</h1>
+    <p>By: Matthew Perez</p>
+</header>
+
+<div id="container">
+    <!-- Sidebar for Dropdown Steps -->
+    <aside>
+        <h3>Select a Step:</h3>
+        <div class="dropdown">
+            <select id="steps" onchange="navigateToStep()">
+                <option value="">--Choose a Step--</option>
+                <option value="step1.html">Step 1: Install CPU</option>
+                <option value="step2.html">Step 2: Install CPU Fan</option>
+                <option value="step3.html">Step 3: Install RAM</option>
+                <option value="step4.html">Step 4: Install Motherboard into Case</option>
+                <option value="step5.html">Step 5: Install PSU</option>
+                <option value="step6.html">Step 6: Connect Cables</option>
+                <option value="step7.html">Step 7: Install GPU</option>
+                <option value="step8.html">Step 8: Install Storage</option>
+            </select>
+        </div>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Needed</a></li>
+            <li><a href="assembly.html">Assembly</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content for Step 4 -->
+    <main>
+        <h2>Step 4: Install Motherboard into Case</h2>
+        
+        <h3>Materials Needed</h3>
+        <ul>
+            <li>Motherboard</li>
+            <li>PC Case</li>
+            <li>Screws and Screwdriver</li>
+        </ul>
+        
+        <h3>Instructions</h3>
+        <ol>
+            <li>Locate the Mounting Holes in the Case</li>
+            <p>Inside the case, find the mounting holes where the motherboard will be secured. These holes should align with the screw holes on the motherboard.</p>
+            <img src="motherb1.jpg" alt="Case mounting holes" class="image">
+            
+            <li>Position the Motherboard</li>
+            <p>Place the motherboard inside the case, aligning the holes on the motherboard with the mounting holes in the case. This is critical to ensure stability and proper connection with the ports on the back of the case.</p>
+            <img src="motherb2.jpg" alt="Motherboard aligned with case holes" class="image">
+            
+            <li>Check Rear IO Alignment</li>
+            <p>Make sure the rear IO panel (where the USB, HDMI, and other ports are) is properly aligned with the cutout in the case. This allows access to external connections and secures the motherboard in place.</p>
+            <img src="motherb3.jpg" alt="Rear IO alignment" class="image">
+            
+            <li>Secure the Motherboard</li>
+            <p>Once everything is aligned, use screws to secure the motherboard to the case at each mounting point. Tighten each screw carefully without over-tightening.</p>
+        </ol>
+    </main>
+</div>
+
+<script>
+    function navigateToStep() {
+        const step = document.getElementById("steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
+
+</body>
+</html>

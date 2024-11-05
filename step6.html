@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 6 - Connect Cables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #0db7a3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        aside {
+            width: 25%;
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+        aside h3 {
+            margin-bottom: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 8px;
+        }
+        aside ul li a {
+            color: #494949;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
+        main {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        main p, main li {
+            line-height: 1.6;
+            color: #666;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1em;
+        }
+        .image {
+            width: 50%;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How to Build a PC: Step 6</h1>
+    <p>By: Matthew Perez</p>
+</header>
+
+<div id="container">
+    <!-- Sidebar for Dropdown Steps -->
+    <aside>
+        <h3>Select a Step:</h3>
+        <div class="dropdown">
+            <select id="steps" onchange="navigateToStep()">
+                <option value="">--Choose a Step--</option>
+                <option value="step1.html">Step 1: Install CPU</option>
+                <option value="step2.html">Step 2: Install CPU Fan</option>
+                <option value="step3.html">Step 3: Install RAM</option>
+                <option value="step4.html">Step 4: Install Motherboard into Case</option>
+                <option value="step5.html">Step 5: Install PSU and Manage Cables</option>
+                <option value="step6.html">Step 6: Connect Cables</option>
+                <option value="step7.html">Step 7: Install GPU</option>
+                <option value="step8.html">Step 8: Install Storage</option>
+            </select>
+        </div>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Needed</a></li>
+            <li><a href="assembly.html">Assembly</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content for Step 6 -->
+    <main>
+        <h2>Step 6: Connect Cables</h2>
+        
+        <h3>Materials Needed</h3>
+        <ul>
+            <li>Power Supply Cables</li>
+            <li>Motherboard Manual (for cable placement reference)</li>
+        </ul>
+        
+        <h3>Instructions</h3>
+        <ol>
+            <li>Locate Cable Ports on the Motherboard</li>
+            <p>At this stage, you'll see a range of cables that need to be connected to the motherboard. Organize them for easy access.</p>
+            <img src="cable1.jpg" alt="Motherboard with various cables around" class="image">
+
+            <li>Identify CPU Fan Connector</li>
+            <p>Locate the “CPU_FAN” port on the motherboard for the CPU cooler fan. This connector is typically labeled.</p>
+            <img src="cable2.jpg" alt="CPU_FAN connector on motherboard" class="image">
+
+            <li>Locate Chassis Fan Connector</li>
+            <p>Identify the “CHA_FAN” or “SYS_FAN” connector on the motherboard for connecting any additional case fans.</p>
+            <img src="cable3.jpg" alt="CHA_FAN connector on motherboard" class="image">
+
+            <li>Prepare Front Panel Cables</li>
+            <p>Gather the front panel connectors for items like power and reset switches, which will connect at the bottom of the motherboard.</p>
+            <img src="cable4.jpg" alt="Front panel cables before installation" class="image">
+
+            <li>Consult Manual for F_PANEL Configuration</li>
+            <p>Use your motherboard's manual to correctly place the front panel connectors. This ensures your power button, LEDs, and reset switch will function.</p>
+            <img src="cable9.jpg" alt="Manual diagram showing F_PANEL pin configuration" class="image">
+
+            <li>Connect Front Panel Cables</li>
+            <p>Align each front panel cable with the correct pins on the motherboard, referring to the manual for guidance.</p>
+            <img src="cable5.jpg" alt="Front panel cables connected on motherboard" class="image">
+        </ol>
+        
+        <h3>Video Guides</h3>
+        <ul>
+            <li>PSU Power Cable and USB 3.2 Gen 1 Connection: <a href="https://youtu.be/pz_V96qKcbU" target="_blank">Watch Video</a></li>
+            <li>Fan Connection Example: <a href="https://youtu.be/C6iwJihE55g" target="_blank">Watch Video</a></li>
+        </ul>
+    </main>
+</div>
+
+<script>
+    function navigateToStep() {
+        const step = document.getElementById("steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
+
+</body>
+</html>

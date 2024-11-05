@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 2 - Install CPU Fan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #0db7a3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        aside {
+            width: 25%;
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+        aside h3 {
+            margin-bottom: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 8px;
+        }
+        aside ul li a {
+            color: #494949;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
+        main {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        main p, main li {
+            line-height: 1.6;
+            color: #666;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1em;
+        }
+        .image {
+            width: 50%;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How to Build a PC: Step 2</h1>
+    <p>By: Matthew Perez</p>
+</header>
+
+<div id="container">
+    <!-- Sidebar for Dropdown Steps -->
+    <aside>
+        <h3>Select a Step:</h3>
+        <div class="dropdown">
+            <select id="steps" onchange="navigateToStep()">
+                <option value="">--Choose a Step--</option>
+                <option value="step1.html">Step 1: Install CPU</option>
+                <option value="step2.html">Step 2: Install CPU Fan</option>
+                <option value="step3.html">Step 3: Install RAM</option>
+                <option value="step4.html">Step 4: Install Motherboard into Case</option>
+                <option value="step5.html">Step 5: Install PSU</option>
+                <option value="step6.html">Step 6: Connect Cables</option>
+                <option value="step7.html">Step 7: Install GPU</option>
+                <option value="step8.html">Step 8: Install Storage</option>
+            </select>
+        </div>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Needed</a></li>
+            <li><a href="assembly.html">Assembly</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content for Step 2 -->
+    <main>
+        <h2>Step 2: Install CPU Fan</h2>
+        
+        <h3>Materials Needed</h3>
+        <ul>
+            <li>CPU Fan</li>
+            <li>Motherboard</li>
+        </ul>
+        
+        <h3>Instructions</h3>
+        <ol>
+            <li>Locate the Mounting Holes on the Motherboard</li>
+            <p>Find the holes on the motherboard where the CPU fan will be installed. These are usually marked and align with the fan's mounting brackets.</p>
+            <img src="cpufan1.jpg" alt="Motherboard mounting holes for CPU fan" class="image">
+            
+            <li>Insert the Screws into the Mounting Holes</li>
+            <p>Place the screws into the motherboard mounting holes to prepare for securing the fan.</p>
+            <img src="cpufan2.jpg" alt="Screws inserted into motherboard holes" class="image">
+            
+            <li>Identify the CPU Fan</li>
+            <p>Make sure you have the correct CPU fan for your processor. This fan helps to keep the CPU cool during operation.</p>
+            <img src="cpufan3.jpg" alt="Image of the CPU fan" class="image">
+            
+            <li>Attach the Bracket</li>
+            <p>Install the silver bracket that comes with the fan. This bracket has a hole to insert screws, which will secure the fan to the motherboard.</p>
+            <img src="cpufan4.jpg" alt="CPU fan bracket" class="image">
+            
+            <li>Secure the CPU Fan</li>
+            <p>Finally, secure the CPU fan by screwing it into the bracket and mounting holes. Ensure it is firmly in place to maximize cooling efficiency.</p>
+            <img src="cpufan5.jpg" alt="Installed CPU fan" class="image">
+        </ol>
+
+
+        <h3>Important Tips</h3>
+        <ul>
+            <li><strong>Align Properly:</strong> Ensure the fan aligns with the mounting holes to avoid improper installation.</li>
+            <li><strong>Secure the Screws:</strong> Tighten each screw evenly for a balanced fit.</li>
+        </ul>
+    </main>
+</div>
+
+<script>
+    function navigateToStep() {
+        const step = document.getElementById("steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -50,6 +50,9 @@
             text-decoration: none;
             font-weight: bold;
         }
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
         main {
             width: 75%;
             padding: 20px;
@@ -64,26 +67,12 @@
             line-height: 1.6;
             color: #666;
         }
-        .image-section, .video-section {
+        .dropdown {
             margin-top: 20px;
-            text-align: left; /* Aligns text to the left */
         }
-        .image-section img, .video-section video {
-            max-width: 30%; /* Adjusted width to make images smaller */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 5px;
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-        }
-        .caption {
-            margin: 10px 0;
-            font-size: 0.9em;
-            color: #555;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
+        .dropdown select {
             padding: 10px;
-            text-align: center;
+            font-size: 1em;
         }
     </style>
 </head>
@@ -95,63 +84,54 @@
 </header>
 
 <div id="container">
+    <!-- Sidebar for Navigation -->
     <aside>
         <h3>Sections</h3>
         <ul>
-            <li><a href="index.html">Home</a></li> 
+            <li><a href="index.html">Home</a></li>
             <li><a href="parts.html">Parts Needed</a></li>
             <li><a href="assembly.html">Assembly</a></li>
-            <li><a href="troubleshooting.html">Troubleshooting</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
         </ul>
     </aside>
 
+    <!-- Main Assembly Content -->
     <main>
         <h2>Assembly</h2>
-        
-        
-        <!-- Essential Parts Image -->
+        <p>In this section, you'll find all the steps to assemble your PC from start to finish.</p>
+
+        <!-- Essentials Image -->
         <section class="image-section">
-            <img src="Ess1.jpg" alt="Essential Parts Needed for Build">
-            <p class="caption">These are the essential parts you will need for the build. The photo above displays three different motherboards, though you only need one.
-
-
-
-
-
-
-            </p>
+            <img src="Ess1.jpg" alt="Essential Parts Needed for Build" style="max-width: 50%; height: auto; border-radius: 5px; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);">
+            <p>These are the essential parts you will need for the build. The photo above displays three different motherboards, though you only need one.</p>
         </section>
         
-        <!-- Step 1: CPU Installation -->
-        <h3>Step 1: CPU Installation</h3>
-        
-        <!-- CPU Image Closeup with Arrow -->
-        <section class="image-section">
-            <img src="cpuarrow1.jpg" alt="Close-up of CPU showing the gold arrow">
-            <p class="caption">This close-up of the CPU shows the gold arrow. Make sure to line this up with the arrow on your motherboard during installation.</p>
-        </section>
-
-        <!-- CPU Installation Video -->
-        <section class="video-section">
-            <video controls>
-                <source src="cpufirst1.mp4" type="video/mp4">
-            
-            </video>
-            <p class="caption">A video tutorial on how to install the CPU onto the motherboard. Handle the CPU carefully, as the pins on the underneath are fragile. Always hold the CPU from the sides, never from the bottom. When installing, avoid pressing down; instead, gently position the CPU and let it settle into place.</p>
-        </section>
-
-        <!-- Completed CPU Installation Image -->
-        <section class="image-section">
-            <img src="cpudone1.jpg" alt="CPU installed on the motherboard">
-            <p class="caption">This image shows the CPU installation completed. Make sure everything is secure before moving on to the next steps.</p>
-        </section>
-        
+        <!-- Dropdown Menu for Steps -->
+        <div class="dropdown">
+            <label for="steps">Select a step:</label>
+            <select id="steps" onchange="navigateToStep()">
+                <option value="">--Choose a Step--</option>
+                <option value="step1.html">Step 1: Install CPU</option>
+                <option value="step2.html">Step 2: Install CPU Fan</option>
+                <option value="step3.html">Step 3: Install RAM</option>
+                <option value="step4.html">Step 4: Install Motherboard into Case</option>
+                <option value="step5.html">Step 5: Install PSU</option>
+                <option value="step6.html">Step 6: Connect Cables</option>
+                <option value="step7.html">Step 7: Install GPU</option>
+                <option value="step8.html">Step 8: Install Storage</option>
+            </select>
+        </div>
     </main>
 </div>
 
-<footer>
-    <p>&copy; 2024 Matthew Perez. All rights reserved.</p>
-</footer>
+<script>
+    function navigateToStep() {
+        const step = document.getElementById("steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
 
 </body>
 </html>

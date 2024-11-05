@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3 - Install RAM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #0db7a3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        aside {
+            width: 25%;
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+        aside h3 {
+            margin-bottom: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 8px;
+        }
+        aside ul li a {
+            color: #494949;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
+        main {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        main p, main li {
+            line-height: 1.6;
+            color: #666;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1em;
+        }
+        .image {
+            width: 50%;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How to Build a PC: Step 3</h1>
+    <p>By: Matthew Perez</p>
+</header>
+
+<div id="container">
+    <!-- Sidebar for Dropdown Steps -->
+    <aside>
+        <h3>Select a Step:</h3>
+        <div class="dropdown">
+            <select id="steps" onchange="navigateToStep()">
+                <option value="">--Choose a Step--</option>
+                <option value="step1.html">Step 1: Install CPU</option>
+                <option value="step2.html">Step 2: Install CPU Fan</option>
+                <option value="step3.html">Step 3: Install RAM</option>
+                <option value="step4.html">Step 4: Install Motherboard into Case</option>
+                <option value="step5.html">Step 5: Install PSU</option>
+                <option value="step6.html">Step 6: Connect Cables</option>
+                <option value="step7.html">Step 7: Install GPU</option>
+                <option value="step8.html">Step 8: Install Storage</option>
+            </select>
+        </div>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Needed</a></li>
+            <li><a href="assembly.html">Assembly</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content for Step 3 -->
+    <main>
+        <h2>Step 3: Install RAM</h2>
+        
+        <h3>Materials Needed</h3>
+        <ul>
+            <li>RAM Sticks</li>
+            <li>Motherboard</li>
+        </ul>
+        
+        <h3>Instructions</h3>
+        <ol>
+            <li>Locate the RAM Slots on the Motherboard</li>
+            <p>Find the RAM slots on your motherboard, usually labeled DIMM 1, 2, 3, and 4. For dual-channel performance, it's best to install your RAM in slots 1 and 3, or 2 and 4.</p>
+            
+            <li>Align the RAM Stick</li>
+            <p>Take one RAM stick and align it with the slot. The RAM has a notch on the bottom that matches the slot, so it can only be inserted one way.</p>
+            
+            <li>Install the RAM Stick</li>
+            <p>Carefully insert the RAM stick into the slot. Apply firm, even pressure until you hear a click, indicating that the RAM is fully seated and the side clips have locked it in place.</p>
+            <img src="ram1in.jpg" alt="RAM installed in slot" class="image">
+        </ol>
+
+        <h3>Video Guide</h3>
+        <p>Here’s a video showing the installation process in detail: <a href="https://youtu.be/3KlhXFxDj90" target="_blank">RAM Installation Video</a></p>
+
+        <h3>Important Tips</h3>
+        <ul>
+            <li><strong>Slot Order:</strong> If you’re using two RAM sticks, use slots 1 and 3 or 2 and 4 to enable dual-channel mode for better performance.</li>
+            <li><strong>Listen for the Click:</strong> Push the RAM down firmly until you hear a click, signaling it is securely installed.</li>
+        </ul>
+    </main>
+</div>
+
+<script>
+    function navigateToStep() {
+        const step = document.getElementById("steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
+
+</body>
+</html>

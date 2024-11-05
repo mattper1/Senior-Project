@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build a PC: Essential Steps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #0db7a3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        aside {
+            width: 25%;
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+        aside h3 {
+            margin-bottom: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 8px;
+        }
+        aside ul li a {
+            color: #494949;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
+        main {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        main p, main li {
+            line-height: 1.6;
+            color: #666;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How to Build a PC: Essential Steps</h1>
+    <p>By: Matthew Perez</p>
+</header>
+
+<div id="container">
+    <aside>
+        <h3>Select a Step:</h3>
+        <div class="dropdown">
+            <label for="steps">Select an essential step:</label>
+            <select id="steps" onchange="navigateToStep()">
+                <option value="">--Choose an Essential Step--</option>
+                <option value="essential1.html">Windows Installation</option>
+                <option value="essential2.html">Graphics Driver Installation</option>
+                <option value="essential3.html">Motherboard BIOS Installation</option>
+                <option value="essential4.html">WiFi Drivers Installation</option>
+            </select>
+        </div>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Needed</a></li>
+            <li><a href="assembly.html">Assembly</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Steps to Create a Bootable USB for Windows</h2>
+        <h3>Materials Needed:</h3>
+        <ul>
+            <li>A USB flash drive (8GB minimum recommended)</li>
+            <li>A computer with internet access</li>
+            <li>Windows 10 or Windows 11 ISO file</li>
+        </ul>
+        
+        <h3>Instructions:</h3>
+        <ol>
+            <li><strong>Download the Windows Media Creation Tool:</strong>
+                <ul>
+                    <li>Go to the Microsoft Download page for Windows 10 or Windows 11.</li>
+                    <li>Click on the "Download tool now" button to download the Media Creation Tool.</li>
+                </ul>
+            </li>
+            <li><strong>Run the Media Creation Tool:</strong>
+                <ul>
+                    <li>Locate the downloaded tool and double-click it to run.</li>
+                    <li>Accept the license terms when prompted.</li>
+                </ul>
+            </li>
+            <li><strong>Choose the Installation Option:</strong>
+                <ul>
+                    <li>Select "Create installation media (USB flash drive) for another PC" and click Next.</li>
+                </ul>
+            </li>
+            <li><strong>Select Language, Edition, and Architecture:</strong>
+                <ul>
+                    <li>Choose your preferred language, edition, and select 64-bit architecture.</li>
+                    <li>Click Next once you've made your selections.</li>
+                </ul>
+            </li>
+            <li><strong>Select USB Flash Drive:</strong>
+                <ul>
+                    <li>Choose USB flash drive as the media to use and click Next.</li>
+                    <li>Select your USB drive from the list, ensuring it’s empty.</li>
+                    <li>Click Next to proceed.</li>
+                </ul>
+            </li>
+            <li><strong>Download Windows:</strong>
+                <ul>
+                    <li>The tool will download the Windows files to your USB drive.</li>
+                </ul>
+            </li>
+            <li><strong>Create the Bootable USB:</strong>
+                <ul>
+                    <li>Once the download is complete, the tool will create the bootable USB drive.</li>
+                    <li>You'll see a message that says "Your USB flash drive is ready." Click Finish.</li>
+                </ul>
+            </li>
+            <li><strong>Eject the USB Drive:</strong>
+                <ul>
+                    <li>Safely eject the USB drive from your computer by right-clicking it in File Explorer and selecting Eject.</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <h3>Using the Bootable USB:</h3>
+        <ul>
+            <li>To use the bootable USB drive, insert it into the PC where you want to install Windows.</li>
+            <li>The PC should boot from the USB drive, displaying the Windows installation screen.</li>
+        </ul>
+    </main>
+</div>
+
+<script>
+    function navigateToStep() {
+        var select = document.getElementById("steps");
+        var selectedValue = select.value;
+        if (selectedValue) {
+            window.location.href = selectedValue;
+        }
+    }
+</script>
+
+</body>
+</html>
