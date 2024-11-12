@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimization - How to Build a PC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; 
+        }
+
+    
+        header {
+            background-color: #0db7a3; 
+            color: white;
+            padding: 20px; 
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem; 
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+
+        /* Main Container */
+        #container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Sidebar Styling */
+        aside {
+            width: 25%;
+            padding: 20px;
+            background-color: #eaeaea;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h3 {
+            margin-bottom: 10px;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 8px;
+        }
+
+        aside ul li a {
+            color: #494949;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        aside ul li a:hover {
+            color: #0db7a3;
+        }
+
+        /* Main Content Styling */
+        main {
+            width: 75%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main h2 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        main p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Image Section Styling */
+        .image-section img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        .dropdown label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .dropdown select {
+            padding: 12px;
+            width: 100%;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            border: 2px solid #ddd;
+            background-color: #fff;
+            transition: border-color 0.3s ease;
+        }
+
+        .dropdown select:focus {
+            border-color: #0db7a3;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            #container {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>How to Build a PC: From Start to End</h1>
+    <p>By: Matthew Perez</p>
+</header>
+
+<div id="container">
+    <aside>
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Parts Needed</a></li>
+            <li><a href="assembly.html">Assembly</a></li>
+            <li><a href="essential.html">Essential Steps</a></li>
+            <li><a href="optimization.html">Optimization</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Optimization</h2>
+        <p>This section covers advanced techniques for maximizing the performance of your PC. Here, you’ll find information on BIOS settings, overclocking, and other adjustments that can help your system run faster and more efficiently.</p>
+
+        <!-- Optimization Image -->
+        <section class="image-section">
+            <img src="opti.jpg" alt="Optimization for PC Performance">
+        </section>
+
+        <!-- Dropdown Menu for Optimization Techniques -->
+        <div class="dropdown">
+            <label for="optimization-steps">Select an optimization technique:</label>
+            <select id="optimization-steps" onchange="navigateToOptimizationStep()">
+                <option value="">--Choose an Optimization Technique--</option>
+                <option value="opticpu.html">CPU Overclocking</option>
+                <option value="optigpu.html">GPU Overclocking</option>
+                <option value="optiram.html">RAM Overclocking</option>
+            </select>
+        </div>
+    </main>
+</div>
+
+<script>
+    function navigateToOptimizationStep() {
+        const step = document.getElementById("optimization-steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
+
+</body>
+</html>

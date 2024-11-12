@@ -1,0 +1,108 @@
+/* General Styles for the Page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+}
+
+/* Header Styles */
+header {
+    background-color: #0db7a3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+/* Sidebar Styles */
+#container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+aside {
+    width: 25%;
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+aside h3 {
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 8px;
+    transition: all 0.3s ease;  /* Transition for hover effect */
+}
+
+aside ul li a {
+    color: #494949;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+aside ul li a:hover {
+    color: #0db7a3;  /* Green-ish color on hover */
+}
+
+aside ul li:hover {
+    background-color: #e0e0e0;  /* Background color change on hover */
+}
+
+/* Main Content Styles */
+main {
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+main p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Image Hover Effect */
+section .image-section img {
+    max-width: 50%;  /* Keep the image size the same */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;  /* Smooth transition for the image */
+}
+
+section .image-section img:hover {
+    transform: scale(1.05);  /* Image enlarges slightly on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    margin-top: 20px;
+}
+
+.dropdown select {
+    padding: 10px;
+    font-size: 1em;
+}
+]

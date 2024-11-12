@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step 1 - Install CPU</title>
+    <title>RAM Overclocking Guide</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,6 +34,7 @@
             width: 25%;
             padding: 20px;
             background-color: #eaeaea;
+            box-sizing: border-box;
         }
         aside h3 {
             margin-bottom: 10px;
@@ -73,6 +74,9 @@
         .dropdown select {
             padding: 10px;
             font-size: 1em;
+            width: 100%;  /* Ensures the dropdown doesn't overflow the sidebar */
+            max-width: 100%;  /* Prevents the dropdown from exceeding the width of the sidebar */
+            box-sizing: border-box; /* Ensures padding is included in the width calculation */
         }
         .image {
             width: 50%;
@@ -85,25 +89,20 @@
 <body>
 
 <header>
-    <h1>How to Build a PC: Step 1</h1>
+    <h1>How to Build a PC: From Start to End</h1>
     <p>By: Matthew Perez</p>
 </header>
 
 <div id="container">
-    <!-- Sidebar for Dropdown Steps -->
+    <!-- Sidebar for Dropdown Steps and Navigation Links -->
     <aside>
         <h3>Select a Step:</h3>
         <div class="dropdown">
             <select id="steps" onchange="navigateToStep()">
-                <option value="">--Choose a Step--</option>
-                <option value="step1.html">Step 1: Install CPU</option>
-                <option value="step2.html">Step 2: Install CPU Fan</option>
-                <option value="step3.html">Step 3: Install RAM</option>
-                <option value="step4.html">Step 4: Install Motherboard into Case</option>
-                <option value="step5.html">Step 5: Install PSU</option>
-                <option value="step6.html">Step 6: Connect Cables</option>
-                <option value="step7.html">Step 7: Install GPU</option>
-                <option value="step8.html">Step 8: Install Storage</option>
+                <option value="">--Choose an Optimization --</option>
+                <option value="opticpu.html">CPU Overclocking</option>
+                <option value="optigpu.html">GPU Overclocking</option>
+                <option value="optiram.html">RAM Overclocking</option>
             </select>
         </div>
         <h3>Sections</h3>
@@ -116,20 +115,34 @@
         </ul>
     </aside>
 
-    <!-- Main Content for Step 1 -->
+    <!-- Main Content for RAM Overclocking -->
     <main>
-        <h2>Step 1: Install CPU</h2>
+        <h2>Why Overclock Your RAM?</h2>
+        <p>Overclocking your RAM can improve overall system performance by increasing memory bandwidth, which helps in tasks like gaming, content creation, and multitasking. 
+        <h3>Overclocking Video Guide</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/b0ST8LGLthc" title="RAM Overclocking Guide" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h3>Benchmarking RAM Performance</h3>
+        <p>MemTest86 is a dedicated RAM testing software is designed specifically for checking memory stability under stress, ensuring that your overclocked RAM is running smoothly without errors.</p>
         
-        <h3>Materials Needed</h3>
-        <ul>
-            <li>CPU</li>
-            <li>Motherboard</li>
-        </ul>
-        
-        <h3>Instructions</h3>
         <ol>
-            <li>Locate the CPU Socket on the Motherboard</li>
-            <p>Look for the large square socket on the motherboard, typically labeled "Socket."</p>
-            
-            <li>Identify the Gold Triangle on the CPU</li>
-            <p>Take a look at your CPU and locate the small gold triangle in one corner. This triangle aligns with a corresponding 
+            <li>Download MemTest86 from the official website: <a href="https://www.memtest86.com/" target="_blank">MemTest86 Download</a>.</li>
+            <li>Install MemTest86 to a USB drive using the provided tool.</li>
+            <li>Restart your computer and boot from the USB drive.</li>
+            <li>Once MemTest86 launches, select the test options you want. The default settings are fine for general testing.</li>
+            <li>Allow MemTest86 to run for 2-3 passes. If no errors appear, your RAM is stable. If errors occur, reduce your RAM overclock or adjust voltage settings until the system is stable.</li>
+        </ol>
+    </main>
+</div>
+
+<script>
+    function navigateToStep() {
+        const step = document.getElementById("steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
+
+</body>
+</html>

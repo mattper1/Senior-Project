@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step 2 - Install CPU Fan</title>
+    <title>GPU Overclocking Guide</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,6 +34,7 @@
             width: 25%;
             padding: 20px;
             background-color: #eaeaea;
+            box-sizing: border-box;
         }
         aside h3 {
             margin-bottom: 10px;
@@ -73,6 +74,9 @@
         .dropdown select {
             padding: 10px;
             font-size: 1em;
+            width: 100%;  /* Ensures the dropdown doesn't overflow the sidebar */
+            max-width: 100%;  /* Prevents the dropdown from exceeding the width of the sidebar */
+            box-sizing: border-box; /* Ensures padding is included in the width calculation */
         }
         .image {
             width: 50%;
@@ -85,25 +89,20 @@
 <body>
 
 <header>
-    <h1>How to Build a PC: Step 2</h1>
+    <h1>How to Build a PC: From Start to End</h1>
     <p>By: Matthew Perez</p>
 </header>
 
 <div id="container">
-    <!-- Sidebar for Dropdown Steps -->
+    <!-- Sidebar for Dropdown Steps and Navigation Links -->
     <aside>
         <h3>Select a Step:</h3>
         <div class="dropdown">
             <select id="steps" onchange="navigateToStep()">
-                <option value="">--Choose a Step--</option>
-                <option value="step1.html">Step 1: Install CPU</option>
-                <option value="step2.html">Step 2: Install CPU Fan</option>
-                <option value="step3.html">Step 3: Install RAM</option>
-                <option value="step4.html">Step 4: Install Motherboard into Case</option>
-                <option value="step5.html">Step 5: Install PSU</option>
-                <option value="step6.html">Step 6: Connect Cables</option>
-                <option value="step7.html">Step 7: Install GPU</option>
-                <option value="step8.html">Step 8: Install Storage</option>
+                <option value="">--Choose an Optimization --</option>
+                <option value="opticpu.html">CPU Overclocking</option>
+                <option value="optigpu.html">GPU Overclocking</option>
+                <option value="optiram.html">RAM Overclocking</option>
             </select>
         </div>
         <h3>Sections</h3>
@@ -116,45 +115,29 @@
         </ul>
     </aside>
 
-    <!-- Main Content for Step 2 -->
+    <!-- Main Content for GPU Overclocking -->
     <main>
-        <h2>Step 2: Install CPU Fan</h2>
-        
-        <h3>Materials Needed</h3>
-        <ul>
-            <li>CPU Fan</li>
-            <li>Motherboard</li>
-        </ul>
-        
-        <h3>Instructions</h3>
+        <h2>Why Overclock Your GPU?</h2>
+        <p>GPU overclocking can unlock extra performance, leading to higher frame rates and smoother gaming experiences. By increasing the clock speed of your GPU, you can achieve better performance in demanding applications like video editing, 3D rendering, and gaming.</p>
+
+        <h3>Step 1: Download MSI Afterburner</h3>
+        <p>MSI Afterburner is a popular tool for overclocking your GPU. It allows you to adjust the clock speeds, voltage, and fan speeds to optimize your GPU's performance.</p>
         <ol>
-            <li>Locate the Mounting Holes on the Motherboard</li>
-            <p>Find the holes on the motherboard where the CPU fan will be installed. These are usually marked and align with the fan's mounting brackets.</p>
-            <img src="cpufan1.jpg" alt="Motherboard mounting holes for CPU fan" class="image">
-            
-            <li>Insert the Screws into the Mounting Holes</li>
-            <p>Place the screws into the motherboard mounting holes to prepare for securing the fan.</p>
-            <img src="cpufan2.jpg" alt="Screws inserted into motherboard holes" class="image">
-            
-            <li>Identify the CPU Fan</li>
-            <p>Make sure you have the correct CPU fan for your processor. This fan helps to keep the CPU cool during operation.</p>
-            <img src="cpufan3.jpg" alt="Image of the CPU fan" class="image">
-            
-            <li>Attach the Bracket</li>
-            <p>Install the silver bracket that comes with the fan. This bracket has a hole to insert screws, which will secure the fan to the motherboard.</p>
-            <img src="cpufan4.jpg" alt="CPU fan bracket" class="image">
-            
-            <li>Secure the CPU Fan</li>
-            <p>Finally, secure the CPU fan by screwing it into the bracket and mounting holes. Ensure it is firmly in place to maximize cooling efficiency.</p>
-            <img src="cpufan5.jpg" alt="Installed CPU fan" class="image">
+            <li>Visit the official MSI Afterburner website: <a href="https://www.msi.com/page/afterburner" target="_blank">MSI Afterburner Download</a>.</li>
+            <li>Click the "Download" button to get the latest version.</li>
+            <li>Run the installer and follow the on-screen instructions to complete the installation.</li>
+        </ol>
+        
+        <h3>Step 2: Download Unigine Heaven Benchmark</h3>
+        <p>Unigine Heaven is a GPU stress test and benchmarking tool that helps you test the stability of your overclocked GPU.</p>
+        <ol>
+            <li>Visit the official Unigine Heaven Benchmark website: <a href="https://benchmark.unigine.com/heaven" target="_blank">Unigine Heaven Download</a>.</li>
+            <li>Click "Download" to get the benchmark tool.</li>
+            <li>Install it by running the installer and following the instructions.</li>
         </ol>
 
-
-        <h3>Important Tips</h3>
-        <ul>
-            <li><strong>Align Properly:</strong> Ensure the fan aligns with the mounting holes to avoid improper installation.</li>
-            <li><strong>Secure the Screws:</strong> Tighten each screw evenly for a balanced fit.</li>
-        </ul>
+        <h3>Overclocking Video Guide</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2jRPpb2XGzM" title="GPU Overclocking Guide" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </main>
 </div>
 
