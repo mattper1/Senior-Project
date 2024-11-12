@@ -89,19 +89,4 @@ section .image-section img {
     height: auto;
     border-radius: 5px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;  /* Smooth transition for the image */
-}
-
-section .image-section img:hover {
-    transform: scale(1.05);  /* Image enlarges slightly on hover */
-}
-
-/* Dropdown Styles */
-.dropdown {
-    margin-top: 20px;
-}
-
-.dropdown select {
-    padding: 10px;
-    font-size: 1em;
-}
+    transition: transform 0.3s ease;  /* Smooth tr
