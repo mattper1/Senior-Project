@@ -163,4 +163,12 @@
 
 <script>
     function navigateToStep() {
-        const step = document.getElementById("steps"
+        const step = document.getElementById("steps").value;
+        if (step) {
+            window.location.href = step;
+        }
+    }
+</script>
+
+</body>
+</html>
