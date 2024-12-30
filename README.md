@@ -1,4 +1,4 @@
-This website is my senior project for my Bachelor's degree in Mathematics and Computer Science. The goal of this project is to create an easy-to-follow website that offers clear, step-by-step guides for building and optimizing personal computers. 
+The goal of this project is to create an easy-to-follow website that offers clear, step-by-step guides for building and optimizing personal computers. 
 
 Link to site:https://mattper1.github.io/Senior-Project
 
